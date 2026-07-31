@@ -17,6 +17,8 @@ dotenv.config();
 
 const app = express();
 
+const server = http.createServer(app);
+
 // =====================================
 // Middleware
 // =====================================
@@ -25,7 +27,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-  "https://chat-nest-messenger.vercel.app/",
+  "https://chat-nest-messenger.vercel.app",
 ],
   
     credentials: true,
