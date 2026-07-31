@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://chatnest-messenger.onrender.com",
+  baseURL: "https://chatnest-messenger.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
   },

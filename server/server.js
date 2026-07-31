@@ -25,7 +25,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-  "https://YOUR-VERCEL-APP.vercel.app",
+  "https://chat-nest-messenger.vercel.app/",
 ],
   
     credentials: true,
@@ -60,16 +60,15 @@ app.get("/", (req, res) => {
 // HTTP Server & Socket.IO Setup
 // =====================================
 
-const server = http.createServer(app);
-
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
-    "https://chat-nest-messenger.vercel.app": true,
+    origin: [
+      "http://localhost:5173",
+      "https://chat-nest-messenger.vercel.app",
+    ],
     credentials: true,
   },
 });
-
 // =====================================
 // Online Users Tracker
 // =====================================
