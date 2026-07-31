@@ -13,7 +13,7 @@ import {
   createGroup,
 } from "./api";
 
-const socket = io("http://localhost:5000", {
+const socket = io("https://chatnest-messenger.onrender.com:5000", {
   autoConnect: false,
 });
 
